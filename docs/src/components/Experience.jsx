@@ -1,20 +1,30 @@
-const Experience = () => (
-    <section>
-      <h2>Professional Experience</h2>
-      <div>
-        <h3>AI Engineer Co-Op</h3>
-        <p>Easybee AI, Boston, MA (Aug 2024 - Present)</p>
+import React from 'react';
+
+const Experience = () => {
+  return (
+    <section id="experience" className="mb-5">
+      <h2 className="text-dark-blue">Experience</h2>
+      <div className="mb-3">
+        <h5>AI Engineer Co-Op</h5>
+        <p>
+          <strong>Easybee AI, Boston, MA</strong>
+        </p>
         <ul>
-          <li>Developed advanced chat and voice agents using Python and OpenAI SDK.</li>
+          <li>Developed chat and voice agents using Python and OpenAI SDK.</li>
           <li>Built a CI/CD pipeline with GitHub Actions and deployed applications on AWS.</li>
         </ul>
       </div>
       <div>
-        <h3>Web Development Intern</h3>
-        <p>Al Sagr National Insurance Company, Dubai (Jan 2022 - Jul 2022)</p>
+        <h5>Web Development Intern</h5>
+        <p>
+          <strong>Al Sagr National Insurance Company, Dubai</strong>
+        </p>
+        <ul>
+          <li>Worked on web application development and optimization.</li>
+        </ul>
       </div>
     </section>
   );
-  
+};
+
 export default Experience;
-  

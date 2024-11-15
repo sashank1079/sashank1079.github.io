@@ -1,15 +1,29 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 
-const Header = () => (
-  <header style={{ padding: '1rem', background: '#f8f9fa', textAlign: 'center' }}>
-    <nav>
-      <Link to="/">About</Link> |{' '}
-      <Link to="/education">Education</Link> |{' '}
-      <Link to="/skills">Skills</Link> |{' '}
-      <Link to="/experience">Experience</Link> |{' '}
-      <Link to="/projects">Projects</Link>
-    </nav>
-  </header>
-);
+const Header = () => {
+  return (
+    <header className="text-center mb-5">
+      <h1 className="display-4 text-dark-blue">Sashank Machiraju - Portfolio</h1>
+      <p className="lead text-muted">A passionate software developer and AI enthusiast</p>
+      <nav className="nav justify-content-center">
+        <a className="nav-link" href="#about">
+          About Me
+        </a>
+        <a className="nav-link" href="#education">
+          Education
+        </a>
+        <a className="nav-link" href="#skills">
+          Skills
+        </a>
+        <a className="nav-link" href="#experience">
+          Experience
+        </a>
+        <a className="nav-link" href="#projects">
+          Projects
+        </a>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

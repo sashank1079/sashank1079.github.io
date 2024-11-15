@@ -1,16 +1,23 @@
-const Education = () => (
-    <section>
-      <h2>Education</h2>
-      <div>
-        <h3>Northeastern University</h3>
-        <p>Master of Science in Information Systems (Dec 2024)</p>
+import React from 'react';
+
+const Education = () => {
+  return (
+    <section id="education" className="mb-5">
+      <h2 className="text-dark-blue">Education</h2>
+      <div className="card mb-3 shadow-sm">
+        <div className="card-body">
+          <h5 className="card-title">Northeastern University</h5>
+          <p className="card-text">Master of Science in Information Systems (Dec 2024)</p>
+        </div>
       </div>
-      <div>
-        <h3>BITS Pilani, Dubai Campus</h3>
-        <p>Bachelor of Engineering in Computer Science (Jul 2022)</p>
+      <div className="card shadow-sm">
+        <div className="card-body">
+          <h5 className="card-title">BITS Pilani</h5>
+          <p className="card-text">Bachelor of Engineering in Computer Science (Jul 2022)</p>
+        </div>
       </div>
     </section>
   );
+};
 
 export default Education;
-  
