@@ -1,16 +1,66 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import './Header.css';
 
 const Header = () => {
+  const [activeSection, setActiveSection] = useState('hero'); // Default active section
+
+  useEffect(() => {
+    AOS.init({ duration: 600 });
+
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      const scrollY = window.scrollY;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        // Check if the current section is in view
+        if (
+          scrollY >= sectionTop - window.innerHeight / 3 &&
+          scrollY < sectionTop + sectionHeight - window.innerHeight / 3
+        ) {
+          setActiveSection(section.getAttribute('id'));
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id) => {
+    const target = document.getElementById(id);
+    if (target) {
+      const offset = window.innerHeight / 2 - target.offsetHeight / 2; // Center the section
+      const targetPosition = target.offsetTop - offset;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth',
+      });
+
+      setActiveSection(id); // Update the active section when clicked
+    }
+  };
+
   return (
     <header className="header">
       <div className="nav-container">
-        <nav className="nav">
-          <a className="nav-link" href="#home">&lt;/Home&gt;</a>
-          <a className="nav-link" href="#about">&lt;/AboutMe&gt;</a>
-          <a className="nav-link" href="#skills">&lt;/Skills&gt;</a>
-          <a className="nav-link" href="#projects">&lt;/Projects&gt;</a>
-        </nav>
+        <ul className="nav">
+          {['hero', 'about', 'education', 'skills', 'experience', 'projects'].map((section) => (
+            <li key={section}>
+              <button
+                onClick={() => scrollToSection(section)}
+                className={`nav-link ${activeSection === section ? 'active' : ''}`}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </button>
+            </li>
+          ))}
+        </ul>
       </div>
     </header>
   );

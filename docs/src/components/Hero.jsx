@@ -1,55 +1,42 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
+import bitmoji from '../assets/bitmoji.png';
+
+const greetings = ["Hi", "Hola", "नमस्ते","你好", "Bonjour", "Ciao", "Konnichiwa", "Hallo", "안녕", "olá"];
 
 const Hero = () => {
+  const [currentGreeting, setCurrentGreeting] = useState(greetings[0]);
+
   useEffect(() => {
-    const cursorInner = document.getElementById('cursor-inner');
-    const cursorOuter = document.getElementById('cursor-outer');
-    const links = document.querySelectorAll('a, label, button');
+    let greetingIndex = 0;
+    const interval = setInterval(() => {
+      greetingIndex = (greetingIndex + 1) % greetings.length; // Cycle through greetings
+      setCurrentGreeting(greetings[greetingIndex]);
+    }, 2000); // Change every 2 seconds
 
-    document.addEventListener('mousemove', (e) => {
-      const posX = e.clientX;
-      const posY = e.clientY;
-
-      cursorInner.style.left = `${posX}px`;
-      cursorInner.style.top = `${posY}px`;
-
-      cursorOuter.animate(
-        {
-          left: `${posX}px`,
-          top: `${posY}px`,
-        },
-        { duration: 500, fill: 'forwards' }
-      );
-    });
-
-    links.forEach((link) => {
-      link.addEventListener('mouseenter', () => {
-        cursorInner.classList.add('hover');
-        cursorOuter.classList.add('hover');
-      });
-      link.addEventListener('mouseleave', () => {
-        cursorInner.classList.remove('hover');
-        cursorOuter.classList.remove('hover');
-      });
-    });
+    return () => clearInterval(interval); // Cleanup on component unmount
   }, []);
 
   return (
-    <section className="hero-section text-center">
-      <div className="avatar">
-        <img src="/path/to/your/avatar.png" alt="Avatar" />
-      </div>
-      <h2 className="greeting">Namaste(); I'm</h2>
-      <h1 className="name">Sashank Machiraju.</h1>
+    <section id="hero" className="hero-section text-center">
+      <h2 className="greeting">
+        <span className="highlight">{currentGreeting}</span>, I'm
+      </h2>
+      <h1 className="name">
+        {Array.from("Sashank Machiraju").map((letter, index) => (
+          <span key={index} className={`letter ${letter === ' ' ? 'space' : ''}`}>
+            {letter === ' ' ? '\u00A0' : letter}
+          </span>
+        ))}
+      </h1>
       <h2 className="tagline">I design & code for web.</h2>
       <p className="description">
         Web Developer with experience in software development, AI, and digital design.
         I love fun web UI, collaboration, and creating impactful products.
       </p>
-      <button className="hero-button">Let's Talk!</button>
-      <div id="cursor-inner" className="cursor-inner"></div>
-      <div id="cursor-outer" className="cursor-outer"></div>
+      <div className="avatar">
+        <img src={bitmoji} alt="My Bitmoji" className="bitmoji-image" />
+      </div>
     </section>
   );
 };

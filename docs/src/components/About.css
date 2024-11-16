@@ -1,0 +1,93 @@
+.about-section {
+  font-family: 'Courier New', Courier, monospace;
+  background: linear-gradient(90deg, #121212, #1e1e1e); /* Subtle gradient matching the portfolio theme */
+  color: white;
+  padding: 60px 20px;
+  border-radius: 10px;
+}
+
+.text-light-blue {
+  font-family: 'Courier New', Courier, monospace;
+  color: #b388ff;
+  font-weight: bold;
+  font: 'Courier New', Courier, monospace;
+}
+
+.about-text p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.btn-download {
+  font-family: 'Courier New', Courier, monospace;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #00c6ff, #af09cc, #ff09e7);
+  background-size: 300%;
+  transition: background-position 0.5s ease, box-shadow 0.3s ease;
+}
+
+.btn-download:hover {
+  background-position: 100%; /* Animate the gradient */
+  box-shadow: 0 0 20px #af09cc, 0 0 40px rgba(97, 255, 223, 0.8);
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-image {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Ensures the teal lines stay within the image bounds */
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling */
+}
+
+.about-image:hover img {
+  transform: scale(0.95); /* Scale down on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Optional shadow for effect */
+}
+
+/* Corner line effects */
+.about-image .line {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: teal;
+  transition: width 0.4s ease, height 0.4s ease; /* Smooth expansion */
+}
+
+.about-image .line-horizontal {
+  top: 0;
+  left: 0;
+}
+
+.about-image .line-vertical {
+  bottom: 0;
+  right: 0;
+}
+
+.about-image:hover .line-horizontal {
+  width: 100%; /* Horizontal line expands fully */
+}
+
+.about-image:hover .line-vertical {
+  height: 100%; /* Vertical line expands fully */
+}
+

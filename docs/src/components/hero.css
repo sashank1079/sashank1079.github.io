@@ -1,43 +1,86 @@
 .hero-section {
-  padding: 150px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 50px 0px 20px 20px;
   text-align: center;
 }
 
 .greeting {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 2rem;
   color: #ffffff;
 }
 
 .name {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 4rem;
   font-weight: 700;
   color: #b388ff;
 }
 
 .tagline {
+  font-family: 'Courier New', Courier, monospace;
   font-size: 2.5rem;
   color: #ffffff;
 }
 
 .description {
+  font-family: 'Courier New', Courier, monospace;
   max-width: 600px;
   margin: 20px auto;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
-.hero-button {
-  margin-top: 20px;
-  padding: 10px 30px;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #b388ff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+
+.name {
+  display: inline-block; /* Ensures text behaves correctly for individual spans */
+  font-size: 4.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #af09cc,#3ce2d7,	#008080); /* Gradient colors */
+  background-size: 300%; /* Make the gradient larger for smooth looping */
+  background-clip: text; /* Clip the gradient to the text */
+  -webkit-background-clip: text; /* Safari compatibility */
+  color: transparent; /* Hide the text color to show the gradient */
+  animation: gradientAlternate 3s ease-in-out infinite; /* Alternating gradient animation */
 }
 
-.hero-button:hover {
-  background-color: #8e44ad;
+/* Alternating gradient flow animation */
+@keyframes gradientAlternate {
+  0% {
+    background-position: 0% 50%; /* Start from the left */
+  }
+  50% {
+    background-position: 100% 50%; /* Move to the right */
+  }
+  40% {
+    background-position: 100% 50%; /* Pause at the right */
+  }
+  100% {
+    background-position: 0% 50%; /* Return to the left */
+  }
 }
+
+
+/* Individual letters */
+.letter {
+  font-family: 'Courier New', Courier, monospace;
+  display: inline-block; /* Allows each letter to behave independently */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover animation */
+  cursor: pointer;
+}
+
+/* Hover effect for squeezing letters */
+.letter:hover {
+  transform: scaleX(0.8); /* Squeeze horizontally */
+  color: white; /* Change to a gradient-inspired color */
+}
+
+/* Optional: Add alternate hover colors */
+.letter:hover:nth-child(odd) {
+  color: white; /* Cyan shade for odd letters */
+}
+
+.letter:hover:nth-child(even) {
+  color: white; /* Cyan shade for even letters */
+}
+
