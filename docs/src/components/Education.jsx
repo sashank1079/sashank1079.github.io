@@ -12,7 +12,7 @@ const Education = () => {
       </div>
       <div className="card shadow-sm">
         <div className="card-body">
-          <h5 className="card-title">BITS Pilani</h5>
+          <h5 className="card-title">Birla Institute of Technology and Science, Pilani </h5>
           <p className="card-text">Bachelor of Engineering in Computer Science (Jul 2022)</p>
         </div>
       </div>

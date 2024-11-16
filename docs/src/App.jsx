@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
+import './index.css';
 import Header from './components/Header';
+import Hero from './components/Hero';
 import About from './components/About';
 import Education from './components/Education';
 import Skills from './components/Skills';
@@ -10,13 +11,16 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="container py-5">
+    <div className="container-fluid">
       <Header />
-      <About />
-      <Education />
-      <Skills />
-      <Experience />
-      <Projects />
+      <Hero />
+      <div className="content">
+        <About />
+        <Education />
+        <Skills />
+        <Experience />
+        <Projects />
+      </div>
       <Footer />
     </div>
   );

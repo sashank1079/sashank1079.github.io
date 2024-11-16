@@ -1,0 +1,32 @@
+.header {
+    background-color: #121212;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    transition: color 0.3s ease-in-out;
+    font-size: 1.1rem;
+  }
+  
+  .nav-link:hover {
+    color: #b388ff;
+  }
+  
