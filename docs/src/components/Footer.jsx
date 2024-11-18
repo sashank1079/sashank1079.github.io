@@ -24,7 +24,7 @@ const Footer = () => {
       <p className="text-muted-mt2">Get in touch with me!</p>
       <div className="social-icons">
         <a
-          href="https://github.com/your-github-username"
+          href="https://github.com/sashank1079"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
