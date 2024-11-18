@@ -103,7 +103,7 @@ const Header = () => {
         "Led the deployment of a web application, streamlined report distribution, and improved UI efficiency using React and Angular.",
       ],
       isActive: false,
-      href: "https://alsagrinsurance.ae"
+      href: "https://alsagrins.ae"
     },
     {
       title: "Data Analyst Intern",
