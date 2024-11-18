@@ -1,0 +1,54 @@
+.footer {
+    background-color: #282c34; /* Match the website theme */
+    color: #fff; /* Text color */
+    padding: 20px 0;
+  }
+  
+  .footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+  }
+  
+  .footer .social-link {
+    font-size: 3rem; /* Adjust the size as needed */
+    color: #fff; /* Keep the default color */
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .footer .social-link:hover {
+    color: #61dafb; /* Highlight color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+  }
+  
+  
+  .footer .text-muted {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .text-muted-mt3 {
+    color: white;
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+
+  .text-muted-mt2 {
+    color: white;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+
+  .footer .quote {
+    font-style: italic;
+    font-size: 2rem;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #af09cc, #3ce2d7, #008080);
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: none;
+    -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
+    text-align: center;
+  }
+  
+

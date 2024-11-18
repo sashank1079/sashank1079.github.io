@@ -1,0 +1,33 @@
+.floating-container {
+    position: fixed; /* Lock container in place */
+    bottom: 20px; /* Distance from the bottom of the viewport */
+    left: 20px; /* Distance from the left of the viewport */
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .bitmoji-container {
+    position: relative;
+  }
+  
+  .bitmoji {
+    width: 100px; /* Adjust the Bitmoji size */
+  }
+  
+  .resume-link {
+    position: absolute;
+    top: 5%; /* Adjust to position icon relative to the Bitmoji */
+    right: -20%; /* Adjust to fine-tune position */
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .resume-icon {
+    font-size: 2rem; /* Adjust icon size to match the Bitmoji */
+    color: var(--highlight-color); /* Optional: Blue color for the icon */
+    transition: transform 0.3s ease;
+  }
+  
+  .resume-link:hover .resume-icon {
+    transform: scale(1.2); /* Add hover effect for emphasis */
+  }
+  

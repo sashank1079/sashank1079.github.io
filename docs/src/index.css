@@ -150,10 +150,6 @@ p, .description {
   transition: all 0.3s ease-in-out;
 }
 
-.skill-card:hover {
-  background: #2575fc;
-  box-shadow: 0 8px 16px rgba(37, 117, 252, 0.3);
-}
 
 /* Section divider */
 .section-divider {
@@ -174,3 +170,24 @@ p, .description {
 }
 
 
+/* Default Theme (Dark Mode) */
+:root {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --highlight-color: #b388ff;
+  --subtext-color: #cccccc;
+  --card-background: #202020;
+  --box-shadow: rgba(0, 0, 0, 0.25);
+  --hover-box-shadow: rgba(196, 54, 253, 0.3);
+}
+
+/* Light Mode Theme */
+:root.light-mode {
+  --background-color: #f8f8f8;
+  --text-color: #121212;
+  --highlight-color: #6b4eff;
+  --subtext-color: #888888;
+  --card-background: #ffffff;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+  --hover-box-shadow: rgba(107, 78, 255, 0.3);
+}

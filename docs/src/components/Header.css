@@ -1,85 +1,337 @@
+/* Default Theme (Dark Mode) */
+:root {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --highlight-color: #b388ff;
+  --subtext-color: #cccccc;
+  --card-background: #202020;
+  --box-shadow: rgba(0, 0, 0, 0.25);
+  --hover-box-shadow: rgba(196, 54, 253, 0.3);
+}
+
+/* Light Mode Theme */
+:root.light-mode {
+  --background-color: #f8f8f8;
+  --text-color: #121212; /* Black or dark gray for light mode */
+  --highlight-color: #6b4eff; /* Adjust if needed for visibility */
+  --subtext-color: #666666; /* Darker gray for subtext in light mode */
+  --card-background: #ffffff;
+  --box-shadow: rgba(0, 0, 0, 0.1);
+  --hover-box-shadow: rgba(107, 78, 255, 0.3);
+}
+
+
+/* General styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--background-color); /* Themed background color */
+  color: var(--text-color); /* Themed text color */
+  height: 100vh;
+}
+
 /* Header styling */
 .header {
-  background-color: rgba(29, 29, 29, 0.8); /* Semi-transparent background */
-  padding: 10px 0;
   position: sticky;
-  max-width: 90%; /* Reduce the width and keep it responsive */
-  margin: 0 auto; /* Center the header horizontally */
-  top: 20px; /* Add some spacing from the top */
-  z-index: 200; /* Ensure the header stays on top of other elements */
-  border-radius: 60px; /* Fully rounded edges */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for a modern look */
-  backdrop-filter: blur(14px); /* Add blur effect to the background */
-  -webkit-backdrop-filter: blur(14px); /* Support for Safari */
-  display: flex; /* Ensure content is aligned properly */
-  justify-content: center; /* Center the navigation within the header */
-  align-items: center; /* Vertically align the content */
+  top: 0;
+  width: 100%;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--background-color);
+  box-shadow: none;
 }
 
 /* Navigation styling */
 .nav {
-  list-style: none; /* Remove default list styles */
-  display: flex; /* Horizontal layout */
-  gap: 2rem; /* Add spacing between links */
+  list-style: none;
+  display: flex;
+  gap: 1rem;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;
 }
 
-/* Navigation link styling */
 .nav-link {
-  color: #ffffff; /* Default text color */
-  text-decoration: none; /* Remove underline */
-  font-family: 'Courier New', Courier, monospace; /* Monospace font */
-  transition: color 0.3s ease-in-out, transform 0.3s ease; /* Smooth transitions */
-  font-size: 1.1rem; /* Adjust font size for readability */
-  position: relative; /* Required for positioning the dot */
-  cursor: pointer; /* Indicate interactivity */
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  transition: color 0.3s ease-in-out, transform 0.3s ease, border-bottom 0.3s ease;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
 }
 
-/* Magnify effect on hover */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--highlight-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
 .nav-link:hover {
-  transform: scale(1.2); /* Magnify the text slightly */
-  color: #b388ff; /* Change color on hover */
-  text-shadow: 0 0 10px rgba(179, 136, 255, 0.8); /* Add a glowing effect */
+  transform: scale(1.2);
+  color: var(--highlight-color);
+  text-shadow: 0 0 10px rgba(179, 136, 255, 0.8);
 }
 
 .nav-link.active {
-  color: #b388ff; /* Highlight color */
-  font-weight: bold; /* Make the active link stand out */
-  text-shadow: 0 0 10px rgba(179, 136, 255, 0.8); /* Add a glowing effect */
+  color: var(--highlight-color);
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(179, 136, 255, 0.8);
 }
 
-/* Remove browser defaults for active and visited links */
-.nav-link,
-.nav-link:visited,
-.nav-link:focus,
-.nav-link:active {
-  color: #ffffff; /* Default text color */
-  text-decoration: none; /* Remove underline */
+p{
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--text-color);
 }
 
-/* Active link styling */
-.nav-link.active {
-  color: #b388ff; /* Highlight color */
-  font-weight: bold; /* Make the active link stand out */
-  text-shadow: 0 0 10px rgba(179, 136, 255, 0.8); /* Add a glowing effect */
+.highlight{
+  color: var(--highlight-color);
+  font-weight: bold;
 }
 
 
+/* Content container */
+.content-container {
+  padding: 20px;
+  margin-top: 20px;
+  color: var(--text-color);
+  border-radius: 10px;
+  width: 80%;
+  margin: 20px auto;
+  font-size: 1rem;
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  overflow-y: auto;
+  overflow-x: auto;
+}
 
-/* Responsive adjustments */
+/* Skills container */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Individual skill section */
+.skill-section {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* Category title styling */
+.category-title {
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Single-row layout for skills */
+.skills-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  height: 130px;
+}
+
+/* Individual skill card */
+.skill-card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 15px var(--hover-box-shadow);
+}
+
+/* Skill icon */
+.skill-icon {
+  font-size: 50px;
+  margin-bottom: 5px;
+  color: currentColor;
+}
+
+/* Skill name */
+.skill-name {
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+/* Responsive adjustments for small screens */
 @media (max-width: 768px) {
   .header {
-    max-width: 100%; /* Ensure it spans the full width on smaller screens */
-    padding: 15px 0; /* Adjust padding for smaller screens */
+    padding: 8px 0;
   }
 
   .nav {
-    gap: 1rem; /* Reduce spacing between links */
+    gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
   .nav-link {
-    font-size: 1rem; /* Slightly smaller text for smaller screens */
+    font-size: 0.9rem;
+  }
+
+  .content-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+
+  .content-container {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+}
+
+.experience-timeline {
+  position: relative;
+  padding-left: 20px; /* Adjust space for the content */
+  margin-left: -10px; /* Align with your design */
+  border-left: 1px solid var(--highlight-color); /* Adjust thickness and color */
+  height: 100%; /* Controls the overall height of the line */
+}
+
+
+
+/* Each experience item */
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 30px; /* Consistent spacing between items */
+}
+
+
+/* Content of the experience item */
+.experience-content {
+  margin-left: 30px; /* Matches global spacing */
+  color: var(--text-color); /* Use the global text color */
+}
+
+/* Header and Present Tag */
+.experience-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Title styling */
+.experience-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold; /* Matches global bold text styling */
+  font-size: 1.1rem; /* Matches headings in the rest of the site */
+  color: var(--text-color);
+}
+
+/* Present tag */
+.present-tag {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  padding: 1px 6px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* Company name styling */
+.experience-company {
+  color: var(--highlight-color); /* Matches links across the site */
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.experience-company:hover {
+  text-decoration: underline; /* Adds hover effect consistent with global links */
+  color: var(--hover-box-shadow); /* Slightly brighter on hover */
+}
+
+/* Dates styling */
+.experience-dates {
+  font-size: 0.9rem; /* Consistent with other subtext */
+  color: var(--subtext-color);
+}
+
+/* Description styling */
+.experience-description {
+  font-size: 0.95rem;
+  color: var(--subtext-color); /* Matches subtext colors used elsewhere */
+  margin: 5px 0; /* Consistent spacing for readability */
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .experience-timeline {
+    padding-left: 15px; /* Adjusts padding for smaller screens */
+    margin-left: 15px;
+  }
+
+  .experience-content {
+    margin-left: 20px; /* Smaller spacing for compact layout */
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-title {
+    font-size: 1rem; /* Adjusts title size for small screens */
+  }
+
+  .experience-company {
+    font-size: 0.9rem; /* Reduces company name size */
+  }
+
+  .experience-description {
+    font-size: 0.85rem; /* Compact description text */
   }
 }
 

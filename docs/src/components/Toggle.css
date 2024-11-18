@@ -1,0 +1,74 @@
+/* Toggle Button Container */
+.theme-toggle-container {
+    position: fixed; /* Fixed position */
+    top: 20px; /* Position from the top */
+    right: 20px; /* Position from the right */
+    z-index: 1000; /* Ensure it stays on top */
+  }
+  
+  /* Toggle Switch */
+  .theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px; /* Width of the toggle */
+    height: 30px; /* Height of the toggle */
+  }
+  
+  .theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Slider (Background) */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent; /* Transparent for outline */
+    border: 2px solid var(--text-color); /* Outline style */
+    border-radius: 30px; /* Rounded edges */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Default alignment */
+    padding: 2px; /* Space inside the toggle */
+    transition: background-color 0.3s ease, justify-content 0.3s ease;
+  }
+  
+  .theme-toggle input:checked + .slider {
+    justify-content: flex-end; /* Align the icon to the right when checked */
+    background-color: var(--highlight-color); /* Highlighted background */
+  }
+  
+  /* Icons inside the slider */
+  .icon {
+    font-size: 18px; /* Icon size */
+    color: var(--text-color); /* Default icon color */
+    transition: opacity 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  }
+  
+  .icon.hidden {
+    opacity: 0; /* Hide the icon */
+  }
+  
+  /* Sun icon style */
+  .sun {
+    color: #f8c200; /* Sun color */
+  }
+  
+  /* Moon icon style */
+  .moon {
+    color: #ffffff; /* Moon color */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .theme-toggle-container {
+      top: 15px; /* Adjust for smaller screens */
+      right: 15px;
+    }
+  }
+  

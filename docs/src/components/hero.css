@@ -1,86 +1,121 @@
+/* Hero Section Styling */
 .hero-section {
   font-family: 'Courier New', Courier, monospace;
-  padding: 50px 0px 20px 20px;
+  padding: 30px 20px 30px 20px; /* Increased padding for a more spacious layout */
   text-align: center;
+  background-color: var(--background-color); /* Background adapts to dark/light mode */
 }
 
+/* Greeting Text Styling */
 .greeting {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 2rem;
-  color: #ffffff;
+  font-size: 2.5rem; /* Slightly larger for emphasis */
+  color: var(--highlight-color); /* Dynamic color for light/dark mode */
+  margin-bottom: 10px; /* Add space below greeting */
 }
 
+/* Name Styling with Gradient Animation */
 .name {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 4rem;
+  display: inline-block;
+  font-size: 5rem; /* Larger for impactful design */
   font-weight: 700;
-  color: #b388ff;
+  background: linear-gradient(90deg, #af09cc,#aa35be,#3ce2d7, #19bdb2, #008080); /* Gradient colors */
+  background-size: 300%; /* Smooth looping gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientAlternate 3s ease-in-out infinite; /* Longer animation for subtle effect */
 }
 
-.tagline {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 2.5rem;
-  color: #ffffff;
-}
-
-.description {
-  font-family: 'Courier New', Courier, monospace;
-  max-width: 600px;
-  margin: 20px auto;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-
-.name {
-  display: inline-block; /* Ensures text behaves correctly for individual spans */
-  font-size: 4.5rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #af09cc,#3ce2d7,	#008080); /* Gradient colors */
-  background-size: 300%; /* Make the gradient larger for smooth looping */
-  background-clip: text; /* Clip the gradient to the text */
-  -webkit-background-clip: text; /* Safari compatibility */
-  color: transparent; /* Hide the text color to show the gradient */
-  animation: gradientAlternate 3s ease-in-out infinite; /* Alternating gradient animation */
-}
-
-/* Alternating gradient flow animation */
+/* Gradient Animation */
 @keyframes gradientAlternate {
   0% {
-    background-position: 0% 50%; /* Start from the left */
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 50%; /* Move to the right */
-  }
-  40% {
-    background-position: 100% 50%; /* Pause at the right */
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%; /* Return to the left */
+    background-position: 0% 50%;
   }
 }
 
-
-/* Individual letters */
-.letter {
+/* Tagline Styling */
+.tagline {
   font-family: 'Courier New', Courier, monospace;
-  display: inline-block; /* Allows each letter to behave independently */
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover animation */
+  font-size: 2.2rem; /* Balanced size */
+  color: var(--highlight-color); /* Matches the theme highlight color */
+  margin: 15px 0; /* Space above and below */
+}
+
+/* Description Text Styling */
+.description {
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 700px; /* Slightly wider for better readability */
+  margin: 20px auto;
+  font-size: 1.2rem; /* Slightly larger for comfort */
+  line-height: 1.8;
+  color: var(--subtext-color); /* Softer color for light/dark mode compatibility */
+}
+
+/* Hoverable Letters Styling */
+.letter {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions */
   cursor: pointer;
 }
 
-/* Hover effect for squeezing letters */
 .letter:hover {
-  transform: scaleX(0.8); /* Squeeze horizontally */
-  color: white; /* Change to a gradient-inspired color */
+  transform: translateY(-5px); /* Slight upward movement */
+  color: var(--highlight-color); /* Dynamic hover color */
 }
 
-/* Optional: Add alternate hover colors */
-.letter:hover:nth-child(odd) {
-  color: white; /* Cyan shade for odd letters */
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 50px 15px; /* Adjust padding for tablets */
+  }
+
+  .greeting {
+    font-size: 2rem; /* Smaller size for tablets */
+  }
+
+  .name {
+    font-size: 4rem; /* Reduce font size slightly */
+    background-size: 200%; /* Adjust gradient size for smaller screens */
+  }
+
+  .tagline {
+    font-size: 1.8rem; /* Adjust tagline size */
+  }
+
+  .description {
+    font-size: 1rem; /* Slightly smaller for readability */
+    line-height: 1.6; /* Adjust line height */
+  }
 }
 
-.letter:hover:nth-child(even) {
-  color: white; /* Cyan shade for even letters */
-}
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 10px; /* Compact padding for phones */
+  }
 
+  .greeting {
+    font-size: 1.5rem; /* Further reduce size for small screens */
+  }
+
+  .name {
+    font-size: 3rem; /* Adjust for mobile devices */
+    background-size: 150%; /* Smaller gradient for better fit */
+  }
+
+  .tagline {
+    font-size: 1.5rem; /* Adjust tagline size */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Reduce description size further */
+    line-height: 1.5; /* Maintain readability */
+  }
+}

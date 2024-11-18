@@ -1,11 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import bitmoji from '../assets/bitmoji.png';
+import bitmoji from '../assets/bitmoji.png'; // Default image
+import bitmojiSmile from '../assets/bitmoji-smile.png'; // Hover image
+import resume from '../assets/resume_sashank.pdf';
+import bitmojExcited from '../assets/bitmoji-excited.png';
 
-const greetings = ["Hi", "Hola", "नमस्ते","你好", "Bonjour", "Ciao", "Konnichiwa", "Hallo", "안녕", "olá"];
+const greetings = [
+  "Hi", // English
+  "Hola", // Spanish
+  "नमस्ते", // Hindi
+  "你好", // Chinese (Mandarin)
+  "నమస్కారం", // Telugu
+  "Bonjour", // French
+  "Ciao", // Italian
+  "こんにちは", // Japanese
+  "Hallo", // German
+  "안녕하세요", // Korean
+  "Olá", // Portuguese
+  "مرحبا", // Arabic
+  "שלום", // Hebrew
+  "કેમ છો?", // Gujarati
+  "வணக்கம்", // Tamil
+];
 
 const Hero = () => {
   const [currentGreeting, setCurrentGreeting] = useState(greetings[0]);
+  const [currentImage, setCurrentImage] = useState(bitmoji); // Image state
 
   useEffect(() => {
     let greetingIndex = 0;
@@ -20,7 +40,7 @@ const Hero = () => {
   return (
     <section id="hero" className="hero-section text-center">
       <h2 className="greeting">
-        <span className="highlight">{currentGreeting}</span>, I'm
+        <span className="greeting">{currentGreeting}</span>, I'm
       </h2>
       <h1 className="name">
         {Array.from("Sashank Machiraju").map((letter, index) => (
@@ -29,13 +49,26 @@ const Hero = () => {
           </span>
         ))}
       </h1>
-      <h2 className="tagline">I design & code for web.</h2>
+      <h2 className="tagline">I'm an AI and Data enthusiast.</h2>
       <p className="description">
-        Web Developer with experience in software development, AI, and digital design.
-        I love fun web UI, collaboration, and creating impactful products.
+        Master’s student in Information Systems with expertise in web development, data pipelines, cloud services, and AI.
+        Passionate about designing innovative solutions and delivering impactful user experiences.
       </p>
       <div className="avatar">
-        <img src={bitmoji} alt="My Bitmoji" className="bitmoji-image" />
+        {/* Bitmoji with hover effect */}
+        <a
+          href={resume} // Replace with your resume URL
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={currentImage}
+            alt="My Bitmoji"
+            className="bitmoji-image"
+            onMouseEnter={() => setCurrentImage(bitmojExcited)} // Change to smile on hover
+            onMouseLeave={() => setCurrentImage(bitmoji)} // Revert back on leave
+          />
+        </a>
       </div>
     </section>
   );

@@ -1,0 +1,40 @@
+/* Timeline container */
+.timeline-container {
+    position: relative;
+    padding-left: 0px;
+    margin-left: 10px;
+    border-left: 2px solid  rgb(112, 112, 112); /* Vertical timeline */
+    top: 2px;
+  }
+  
+  /* Each timeline item */
+  .timeline-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  /* Timeline dot */
+  .timeline-dot {
+    width: 12px; /* Customizable size */
+    height: 12px;
+    background-color: rgb(112, 112, 112); /* Inactive color */
+    border-radius: 50%;
+    position: absolute;
+    left: -7px; /* Align with the line */
+    top: 10px; /* Center with content */
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Active dot */
+  .timeline-dot.active {
+    background-color: var(--highlight-color); /* Active color */
+  }
+  
+  /* Timeline content */
+  .timeline-content {
+    margin-left: 20px; /* Space between dot and content */
+  }
+  
