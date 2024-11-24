@@ -1,54 +1,65 @@
 .footer {
-    background-color: #282c34; /* Match the website theme */
-    color: #fff; /* Text color */
-    padding: 20px 0;
-  }
-  
-  .footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 55px;
-  }
-  
-  .footer .social-link {
-    font-size: 3rem; /* Adjust the size as needed */
-    color: #fff; /* Keep the default color */
-    transition: transform 0.3s, color 0.3s;
-  }
-  
-  .footer .social-link:hover {
-    color: #61dafb; /* Highlight color on hover */
-    transform: scale(1.2); /* Slightly enlarge on hover */
-  }
-  
-  
-  .footer .text-muted {
-    margin-top: 15px;
-    font-size: 0.9rem;
-  }
-  
-  .text-muted-mt3 {
-    color: white;
-    margin-top: 15px;
-    font-size: 0.9rem;
-  }
+  background-color: var(--background-color); /* Transparent background */
+  color: #ffffff; /* Default white text for readability */
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to define the footer area */
+}
 
-  .text-muted-mt2 {
-    color: white;
-    margin-top: 15px;
-    font-size: 1.5rem;
-    font-weight: bolder;
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 55px;
+}
+
+.footer .social-link {
+  font-size: 3rem; /* Adjust the size as needed */
+  color: var(--text-color); /* Default white for social icons */
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer .social-link:hover {
+  color: #61dafb; /* Light blue hover color */
+  transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+.footer .text-muted {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6); /* Subtle white with transparency */
+}
+
+.text-muted-mt3 {
+  color: var(--text-color); /* Slightly brighter white for contrast */
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.text-muted-mt2 {
+  color: var(--text-color); /* Bright white for emphasis */
+  margin-top: 15px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.footer .quote {
+  font-style: italic;
+  font-size: 2rem;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #ff79c6, #8be9fd, #50fa7b); /* Vibrant gradient for text */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Transparent text to show gradient */
+  text-align: center;
+  font-weight: bolder;
+}
+
+/* Adjust for responsive design */
+@media (max-width: 768px) {
+  .footer .social-icons {
+    gap: 30px; /* Reduce gap for smaller screens */
   }
 
   .footer .quote {
-    font-style: italic;
-    font-size: 2rem;
-    margin-top: 15px;
-    background: linear-gradient(90deg, #af09cc, #3ce2d7, #008080);
-    -webkit-background-clip: text; /* For WebKit browsers */
-    background-clip: none;
-    -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
-    text-align: center;
+    font-size: 1.5rem; /* Adjust quote size */
   }
-  
-
+}

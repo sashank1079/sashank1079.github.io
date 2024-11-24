@@ -1,5 +1,5 @@
 import Timeline from "./Timeline"; // Import the reusable Timeline component
-import './Header.css';
+import './Main.css';
 const Experience = () => {
   const experiences = [
     {
@@ -21,7 +21,6 @@ const Experience = () => {
           <p className="experience-description">
             Developed advanced chat and voice agents, implemented semantic search, and optimized cloud infrastructure with AWS and CI/CD pipelines.
           </p>
-          <span className="experience-dates">Aug 2024 - Present</span>
         </div>
       ),
     },
@@ -43,7 +42,6 @@ const Experience = () => {
           <p className="experience-description">
             Led the deployment of a web application, streamlined report distribution, and improved UI efficiency using React and Angular.
           </p>
-          <span className="experience-dates">Jan 2022 - Jul 2022</span>
         </div>
       ),
     },
@@ -65,7 +63,6 @@ const Experience = () => {
           <p className="experience-description">
             Implemented sentiment analysis for election predictions using Twitter API and developed real-time visualizations of tweet trends.
           </p>
-          <span className="experience-dates">Jun 2020 - Aug 2020</span>
         </div>
       ),
     },

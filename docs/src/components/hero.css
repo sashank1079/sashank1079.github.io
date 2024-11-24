@@ -52,7 +52,7 @@
 /* Description Text Styling */
 .description {
   font-family: 'Courier New', Courier, monospace;
-  max-width: 700px; /* Slightly wider for better readability */
+  max-width: 950px; /* Slightly wider for better readability */
   margin: 20px auto;
   font-size: 1.2rem; /* Slightly larger for comfort */
   line-height: 1.8;

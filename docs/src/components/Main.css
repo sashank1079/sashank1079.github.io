@@ -54,6 +54,7 @@ body {
   padding: 0;
   margin: 0;
   flex-wrap: wrap;
+  font-weight: bold;
 }
 
 .nav-link {
@@ -103,6 +104,7 @@ p{
 }
 
 .highlight{
+  font-size: 1.2rem;
   color: var(--highlight-color);
   font-weight: bold;
 }
@@ -268,6 +270,7 @@ p{
   font-weight: bold; /* Matches global bold text styling */
   font-size: 1.1rem; /* Matches headings in the rest of the site */
   color: var(--text-color);
+  color: var(--highlight-color);
 }
 
 /* Present tag */
@@ -284,7 +287,7 @@ p{
 
 /* Company name styling */
 .experience-company {
-  color: var(--highlight-color); /* Matches links across the site */
+  color: var(--text-color); /* Matches links across the site */
   font-weight: bold;
   font-size: 1rem;
   text-decoration: none;
@@ -335,3 +338,86 @@ p{
   }
 }
 
+.projects-section {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  padding: 2rem;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #a78bfa; /* Accent color */
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */
+  grid-auto-rows: auto; /* Flexible row height */
+  gap: 1.5rem; /* Space between items */
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+}
+
+.project-card {
+  position: relative; /* Ensure button stays within the card */
+  background-color: #1e1e1e; /* Slightly lighter than the background */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden; /* Prevent content spill */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.date {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.subtext {
+  margin-top: 0.5rem;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* GitHub button styling */
+.github-button {
+  position: absolute; /* Position the button at the bottom-right corner */
+  bottom: 1rem; /* Distance from the bottom edge */
+  right: 1rem; /* Distance from the right edge */
+  width: 40px; /* Set width for the logo button */
+  height: 40px; /* Set height for the logo button */
+  display: flex; /* Center logo inside button */
+  align-items: center;
+  justify-content: center;
+  background-color: #24292e; /* GitHub dark gray */
+  border-radius: 50%; /* Circle button */
+  transition: background-color 0.2s ease-in-out;
+  text-decoration: none; /* Remove underline */
+  z-index: 2; /* Ensure button appears above card content */
+}
+
+/* Hover effect */
+.github-button:hover {
+  background-color: #0366d6; /* GitHub blue */
+}
+
+/* SVG Logo */
+.github-button svg {
+  width: 24px; /* Logo size */
+  height: 24px; /* Logo size */
+  fill: #ffffff; /* Logo color */
+}

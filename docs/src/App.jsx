@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AnimatedCursor from 'react-animated-cursor';
 import './index.css';
-import Header from './components/Header';
+import Main from './components/Main';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
@@ -42,7 +42,7 @@ function App() {
       {/* Header */}
       <Hero />
       <div className="content">
-        <Header />
+        <Main />
         {/* Footer */}
         <Footer />
       </div>

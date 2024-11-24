@@ -51,8 +51,8 @@ const Hero = () => {
       </h1>
       <h2 className="tagline">I'm an AI and Data enthusiast.</h2>
       <p className="description">
-        Master’s student in Information Systems with expertise in web development, data pipelines, cloud services, and AI.
-        Passionate about designing innovative solutions and delivering impactful user experiences.
+      Graduate student in Information Systems skilled in building web applications, developing data workflows, leveraging cloud technologies, and integrating AI. 
+      Focused on crafting practical solutions that enhance functionality and usability.
       </p>
       <div className="avatar">
         {/* Bitmoji with hover effect */}

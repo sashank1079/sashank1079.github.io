@@ -10,7 +10,23 @@ const quotes = [
   "Java is to JavaScript what car is to Carpet. – Chris Heilmann",
   "Knowledge is power. – Francis Bacon",
   "Simplicity is the soul of efficiency. – Austin Freeman",
+  "Debugging is like being the detective in a crime movie where you are also the murderer.",
+  "Programming isn’t about what you know; it’s about what you can figure out. – Chris Pine",
+  "To iterate is human, to recurse is divine. – L. Peter Deutsch",
+  "Code never lies, comments sometimes do. – Ron Jeffries",
+  "There are two ways to write error-free programs; only the third one works.",
+  "A good programmer is someone who always looks both ways before crossing a one-way street.",
+  "I have not failed. I’ve just found 10,000 ways that won’t work. – Thomas Edison",
+  "Optimism is an occupational hazard of programming. Feedback is the treatment. – Kent Beck",
+  "Give a man a program, and you’ll frustrate him for a day. Teach a man to program, and you’ll frustrate him for a lifetime.",
+  "Talk is cheap. Show me the code. – Linus Torvalds",
+  "Any fool can write code that a computer can understand. Good programmers write code that humans can understand. – Martin Fowler",
+  "Always code as if the person who ends up maintaining your code is a violent psychopath who knows where you live. – John Woods",
+  "Programming is thinking, not typing. – Casey Patton",
+  "The best way to get a project done faster is to start sooner. – Jim Highsmith",
+  "Code is like pizza: even when it’s bad, it’s still pretty good."
 ];
+
 
 const getDailyQuote = () => {
   const dayIndex = new Date().getDate() % quotes.length; // Rotate through quotes based on the day
