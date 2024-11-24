@@ -1,6 +1,6 @@
 /* Hero Section Styling */
 .hero-section {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Departure Mono', monospace;
   padding: 30px 20px 30px 20px; /* Increased padding for a more spacious layout */
   text-align: center;
   background-color: var(--background-color); /* Background adapts to dark/light mode */
@@ -8,15 +8,15 @@
 
 /* Greeting Text Styling */
 .greeting {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 2.5rem; /* Slightly larger for emphasis */
+  font-family: 'Departure Mono', monospace;
+    font-size: 2.5rem; /* Slightly larger for emphasis */
   color: var(--highlight-color); /* Dynamic color for light/dark mode */
   margin-bottom: 10px; /* Add space below greeting */
 }
 
 /* Name Styling with Gradient Animation */
 .name {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Departure Mono', monospace;
   display: inline-block;
   font-size: 5rem; /* Larger for impactful design */
   font-weight: 700;
@@ -43,7 +43,7 @@
 
 /* Tagline Styling */
 .tagline {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Departure Mono', monospace;
   font-size: 2.2rem; /* Balanced size */
   color: var(--highlight-color); /* Matches the theme highlight color */
   margin: 15px 0; /* Space above and below */
@@ -51,10 +51,10 @@
 
 /* Description Text Styling */
 .description {
-  font-family: 'Courier New', Courier, monospace;
-  max-width: 950px; /* Slightly wider for better readability */
-  margin: 20px auto;
-  font-size: 1.2rem; /* Slightly larger for comfort */
+  font-family: 'Departure Mono', monospace;
+  max-width: 1000px; /* Slightly wider for better readability */
+  margin: 13px auto;
+  font-size: 1.15rem; /* Slightly larger for comfort */
   line-height: 1.8;
   color: var(--subtext-color); /* Softer color for light/dark mode compatibility */
 }

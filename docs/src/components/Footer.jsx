@@ -66,7 +66,7 @@ const Footer = () => {
         </a>
       </div>
       
-      <p className="text-muted-mt3">&copy; 2024 Sashank Machiraju. All Rights Reserved.</p>
+      <p className="text-muted-mt3"> &copy; Built with coffee ☕, code 💻, and a touch of magic ✨. All Bugs Reserved 🐛.</p>
     </footer>
   );
 };

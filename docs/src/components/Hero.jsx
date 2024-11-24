@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Hero.css';
 import bitmoji from '../assets/bitmoji.png'; // Default image
 import bitmojiSmile from '../assets/bitmoji-smile.png'; // Hover image
-import resume from '../assets/resume_sashank.pdf';
 import bitmojExcited from '../assets/bitmoji-excited.png';
+
 
 const greetings = [
   "Hi", // English
@@ -56,21 +56,16 @@ const Hero = () => {
       </p>
       <div className="avatar">
         {/* Bitmoji with hover effect */}
-        <a
-          href={resume} // Replace with your resume URL
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <img
             src={currentImage}
             alt="My Bitmoji"
             className="bitmoji-image"
-            onMouseEnter={() => setCurrentImage(bitmojExcited)} // Change to smile on hover
+            onMouseEnter={() => setCurrentImage(bitmojiSmile)} // Change to smile on hover
             onMouseLeave={() => setCurrentImage(bitmoji)} // Revert back on leave
           />
-        </a>
       </div>
     </section>
+    
   );
 };
 

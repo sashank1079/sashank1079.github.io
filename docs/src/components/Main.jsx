@@ -12,9 +12,9 @@ const Main = () => {
   
   const tabContent = {
     about: <About />,
-    education: <Education />,
-    skills: <Skills />,
     experience: <Experience />,
+    skills: <Skills />,
+    education: <Education />,
     projects: <Projects/>
   };
 
@@ -23,7 +23,7 @@ const Main = () => {
       <header className="header">
         <div className="nav-container">
           <ul className="nav">
-            {["about", "education", "skills", "experience", "projects"].map((tab) => (
+            {["about","experience", "skills", "education","projects"].map((tab) => (
               <li key={tab}>
                 <button
                   className={`nav-link ${activeTab === tab ? "active" : ""}`}

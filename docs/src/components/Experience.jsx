@@ -7,7 +7,7 @@ const Experience = () => {
       content: (
         <div className="experience-content">
           <div className="experience-header">
-            <h3 className="experience-title">AI Engineer Co-Op</h3>
+            <h3 className="experience-title">AI Engineer</h3>
             <span className="present-tag">Present</span>
           </div>
           <a

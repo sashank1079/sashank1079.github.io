@@ -3,14 +3,12 @@ const Projects = () => {
     const projects = [
         {
           title: "IMDB Movies Data ETL & BI Reporting",
-          date: "(Northeastern University, Dec 2023)",
           description:
             "Built an end-to-end data pipeline using Talend Studio and Apache Spark.",
           githubLink: "https://github.com/sashank1079/IMDB-ETL-Project",
         },
         {
           title: "Face Mask Detection using Keras and TensorFlow",
-          date: "(IEEE, Sep 2021 - Dec 2021)",
           description:
             "Developed a real-time face mask detection system using OpenCV for video stream processing.",
           githubLink: "https://github.com/sashank1079/IEEE-Xplore",
@@ -22,7 +20,6 @@ const Projects = () => {
         {projects.map((project, index) => (
           <div key={index} className="project-card">
             <strong className="highlight">{project.title}</strong>
-            <span className="date">{project.date}</span>
             <p className="subtext">{project.description}</p>
             <a
               href={project.githubLink}

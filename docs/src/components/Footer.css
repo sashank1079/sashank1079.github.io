@@ -42,7 +42,6 @@
 }
 
 .footer .quote {
-  font-style: italic;
   font-size: 2rem;
   margin-top: 15px;
   background: linear-gradient(90deg, #ff79c6, #8be9fd, #50fa7b); /* Vibrant gradient for text */

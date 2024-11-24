@@ -25,7 +25,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Courier New', Courier, monospace;
   background-color: var(--background-color); /* Themed background color */
   color: var(--text-color); /* Themed text color */
   height: 100vh;
@@ -41,7 +40,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px 0;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Departure Mono', monospace;
   background-color: var(--background-color);
   box-shadow: none;
 }
@@ -60,7 +59,7 @@ body {
 .nav-link {
   color: var(--text-color);
   text-decoration: none;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Departure Mono', monospace;
   transition: color 0.3s ease-in-out, transform 0.3s ease, border-bottom 0.3s ease;
   font-size: 1rem;
   cursor: pointer;
@@ -99,7 +98,7 @@ body {
 }
 
 p{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Departure Mono', monospace;
   color: var(--text-color);
 }
 
@@ -120,7 +119,7 @@ p{
   margin: 20px auto;
   font-size: 1rem;
   text-align: left;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Departure Mono', monospace;
   overflow-y: auto;
   overflow-x: auto;
 }
@@ -145,7 +144,7 @@ p{
 /* Category title styling */
 .category-title {
   font-size: 1.2rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Departure Mono', monospace;
   font-weight: 600;
   color: var(--highlight-color);
   margin-bottom: 10px;
@@ -266,7 +265,7 @@ p{
 
 /* Title styling */
 .experience-title {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Departure Mono', monospace;
   font-weight: bold; /* Matches global bold text styling */
   font-size: 1.1rem; /* Matches headings in the rest of the site */
   color: var(--text-color);
@@ -367,6 +366,15 @@ p{
 .project-card {
   position: relative; /* Ensure button stays within the card */
   background-color: #1e1e1e; /* Slightly lighter than the background */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden; /* Prevent content spill */
+}
+.project-card {
+  position: relative; /* Ensure button stays within the card */
+  background-color: var(--background-color); /* Slightly lighter than the background */
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
