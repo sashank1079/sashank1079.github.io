@@ -6,7 +6,6 @@ import {
     FaNodeJs,
     FaPython,
     FaGit,
-    FaAws,
   } from "react-icons/fa";
   import {
     SiMongodb,
