@@ -4,6 +4,12 @@
   padding: 30px 20px 30px 20px; /* Increased padding for a more spacious layout */
   text-align: center;
   background-color: var(--background-color); /* Background adapts to dark/light mode */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex; /* Add flex display */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center; /* Center horizontally */
 }
 
 /* Greeting Text Styling */
@@ -46,7 +52,7 @@
   font-family: 'Departure Mono', monospace;
   font-size: 2.2rem; /* Balanced size */
   color: var(--highlight-color); /* Matches the theme highlight color */
-  margin: 15px 0; /* Space above and below */
+  margin: 30px 0 15px 0; /* Increased top margin */
 }
 
 /* Description Text Styling */
@@ -87,7 +93,7 @@
   }
 
   .tagline {
-    font-size: 1.8rem; /* Adjust tagline size */
+    font-size: 1.5rem; /* Adjust tagline size */
   }
 
   .description {

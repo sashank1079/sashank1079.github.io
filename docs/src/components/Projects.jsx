@@ -1,19 +1,70 @@
 import './Main.css';
 const Projects = () => {
-    const projects = [
-        {
-          title: "IMDB Movies Data ETL & BI Reporting",
-          description:
-            "Built an end-to-end data pipeline using Talend Studio and Apache Spark.",
-          githubLink: "https://github.com/sashank1079/IMDB-ETL-Project",
-        },
-        {
-          title: "Face Mask Detection using Keras and TensorFlow",
-          description:
-            "Developed a real-time face mask detection system using OpenCV for video stream processing.",
-          githubLink: "https://github.com/sashank1079/IEEE-Xplore",
-        },
-      ];
+  const projects = [
+    {
+      title: "RAG Chat Assistant",
+      description: "Built a Retrieval-Augmented Generation (RAG) chatbot using LangChain, Pinecone, and GPT-4. Features include semantic search with BERT-based chunking, efficient vector storage and parallel document processing.",
+      githubLink: "https://github.com/sashank1079/RAG"
+    },
+    {
+      title: "Phidata- an AI framework project",
+      description:
+        "Created various AI agents using the phidata framework; a video analyzer, a PDF assistant and a financial analyst assistant.",
+      githubLink: "https://github.com/sashank1079/phidata",
+    },
+    {
+      title: "CrewAI- an AI framework project",
+      description:
+        "Built a car dealer agent using the crewAI framework",
+      githubLink: "https://github.com/sashank1079/demo-crew-ai",
+    },
+    {
+      title: "IMDB Movies Data ETL & BI Reporting",
+      description:
+        "Built an end-to-end data pipeline using Talend Studio and Alteryx.",
+      githubLink: "https://github.com/sashank1079/IMDB-ETL-Project",
+    },
+    {
+      title: "Face Mask Detection using Keras and TensorFlow",
+      description:
+        "Developed a real-time face mask detection system using OpenCV for video stream processing.",
+      githubLink: "https://github.com/sashank1079/IEEE-Xplore",
+    },
+    {
+      title: "MBTA Tracker",
+      description:
+        "A web application utilizing the MBTA API to display upcoming train schedules for Boston's transit system.",
+      githubLink: "https://github.com/sashank1079/MBTA-tracker",
+    },
+    {
+      title: "Flight Delay Prediction",
+      description:
+        "Developed a machine learning model to predict flight delays using libraries like Pandas, NumPy, Seaborn, Matplotlib, and CatBoost.",
+      githubLink: "https://github.com/sashank1079/prediction-flight-delays",
+    },
+    {
+      title: "LA Crime Analysis",
+      description:
+        "Performed a comprehensive analysis of Los Angeles crime data using data visualization tools and statistical methods to identify trends, hotspots, and patterns.",
+      githubLink: "https://github.com/sashank1079/LA-Crime-Analysis",
+    },
+    {
+      title: "Tour Website",
+      description:
+        "Developed a responsive tour website with a user-friendly interface, showcasing various travel destinations and services.",
+      githubLink: "https://github.com/sashank1079/my_Tour_Web",
+    },
+    {
+      title: "Sports League Management",
+      description:
+        "Designed a comprehensive SQL database to manage sports league operations, including player registration, team management and performance tracking.",
+      githubLink: "https://github.com/sashank1079/SportsLeagueMngmt",
+    },
+    
+  ];
+  
+  
+  
       return (
         <div className="projects-container">
       <div className="projects-grid">

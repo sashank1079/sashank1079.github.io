@@ -7,6 +7,7 @@
   --card-background: #202020;
   --box-shadow: rgba(0, 0, 0, 0.25);
   --hover-box-shadow: rgba(196, 54, 253, 0.3);
+  --skill-card-background: rgba(30, 30, 46, 0.9);
 }
 
 /* Light Mode Theme */
@@ -18,6 +19,7 @@
   --card-background: #ffffff;
   --box-shadow: rgba(0, 0, 0, 0.1);
   --hover-box-shadow: rgba(107, 78, 255, 0.3);
+  --skill-card-background: rgba(255, 255, 255, 0.9);
 }
 
 
@@ -27,7 +29,6 @@ body {
   padding: 0;
   background-color: var(--background-color); /* Themed background color */
   color: var(--text-color); /* Themed text color */
-  height: 100vh;
 }
 
 /* Header styling */
@@ -54,6 +55,7 @@ body {
   margin: 0;
   flex-wrap: wrap;
   font-weight: bold;
+  justify-content: center; /* Center the nav items */
 }
 
 .nav-link {
@@ -163,13 +165,13 @@ p{
 
 /* Individual skill card */
 .skill-card {
-  background-color: var(--card-background);
+  background-color: var(--skill-card-background);
   border-radius: 10px;
   text-align: center;
   padding: 10px;
   cursor: pointer;
   width: 120px;
-  height: 120px;
+  height: 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,7 +193,7 @@ p{
 
 /* Skill name */
 .skill-name {
-  font-size: 1rem;
+  font-size: 0.7rem;
   color: var(--text-color);
   text-align: center;
 }
@@ -204,7 +206,8 @@ p{
 
   .nav {
     gap: 0.5rem;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: center; /* Center align the nav items */
   }
 
   .nav-link {
@@ -213,6 +216,34 @@ p{
 
   .content-container {
     width: 90%;
+  }
+
+  .skills-container {
+    padding: 10px;
+  }
+
+  .skill-section {
+    max-width: 100%;
+  }
+
+  .skills-row {
+    gap: 10px;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .skill-card {
+    width: 100px;
+    height: 90px;
+    padding: 5px;
+  }
+
+  .skill-icon {
+    font-size: 40px;
+  }
+
+  .skill-name {
+    font-size: 0.6rem;
   }
 }
 
@@ -228,6 +259,23 @@ p{
   .content-container {
     width: 95%;
     font-size: 0.9rem;
+  }
+
+  .skills-row {
+    justify-content: space-around;
+  }
+
+  .skill-card {
+    width: 80px;
+    height: 70px;
+  }
+
+  .skill-icon {
+    font-size: 30px;
+  }
+
+  .skill-name {
+    font-size: 0.5rem;
   }
 }
 
@@ -428,4 +476,10 @@ p{
   width: 24px; /* Logo size */
   height: 24px; /* Logo size */
   fill: #ffffff; /* Logo color */
+}
+
+.custom-icon {
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  display: inline-block;
 }

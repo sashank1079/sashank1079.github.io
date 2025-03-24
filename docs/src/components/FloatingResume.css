@@ -10,7 +10,9 @@
   }
   
   .bitmoji {
-    width: 100px; /* Adjust the Bitmoji size */
+    width: 100px; /* Default size */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
   }
   
   .resume-link {
@@ -29,5 +31,18 @@
   
   .resume-link:hover .resume-icon {
     transform: scale(1.2); /* Add hover effect for emphasis */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .bitmoji {
+      width: 80px; /* Smaller size for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bitmoji {
+      width: 60px; /* Even smaller size for mobile devices */
+    }
   }
   

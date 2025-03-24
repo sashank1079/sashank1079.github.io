@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 import FloatingResume from './components/FloatingResume';
+import SplashScreen from './components/SplashScreen';
 
 function App() {
   const [theme, setTheme] = useState('dark'); // Default theme is dark
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div className={`container-fluid ${theme}-theme`}>
+      <SplashScreen />
       {/* Theme Toggle Button */}
       <ThemeToggle toggleTheme={toggleTheme} theme={theme} />
       <FloatingResume/>
@@ -32,10 +34,11 @@ function App() {
   innerScale={0.5}
   outerScale={1.5}
   hasBlendMode={true}
-  showSystemCursor={false}
+  showSystemCursor={true}
+  trailingSpeed={5}
   style={{
     zIndex: 2100,
-    transition: 'opacity 0.3s ease-in-out', // Smooth opacity transition
+    transition: 'opacity 0.1s ease-out', // Smoother opacity transition
   }}
 />
 
